@@ -7,7 +7,14 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<h2 class={twMerge("flex items-center uppercase", className)}><slot /></h2>
+<h2
+  class={twMerge(
+    "flex items-center text-[4.25mm] leading-[6.35mm] uppercase",
+    className
+  )}
+>
+  <slot />
+</h2>
 
 <style>
   h2 {
