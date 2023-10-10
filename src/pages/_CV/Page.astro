@@ -1,0 +1,24 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div
+  class={twMerge(
+    "page box-border overflow-hidden bg-white shadow-lg",
+    className,
+  )}
+>
+  <slot />
+</div>
+
+<style is:global>
+  .page {
+    width: var(--pageWidth);
+    height: var(--pageHeight);
+  }
+</style>

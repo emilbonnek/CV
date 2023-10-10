@@ -1,0 +1,72 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Article from "../../../../components/ui/elements/Article.astro";
+import HeadlineArticle from "../../HeadlineArticle.astro";
+import P from "../../../../components/ui/elements/P.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import ChipList from "../../ChipList.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Volunteer Work" iconName="volunteer" />
+
+  <Article class={className}>
+    <HeadlineArticle
+      title="Maintainer"
+      place="@nanostores/lit"
+      placeLink="https://github.com/nanostores/lit"
+      start="2022"
+    />
+    <P>
+      Architected the official Nanostores integration for Lit, simplifying state
+      management in Lit components. Gained recognition through a recommendation
+      in the Astro framework's documentation.
+    </P>
+    <Ul bulleted>
+      <Li>
+        Developed and maintain a state management integration between Nanostores
+        and Lit, easing the development process for a broad range of projects.
+      </Li>
+      <Li>
+        Earned inclusion in Astro framework's official docs, testifying to the
+        integration's value and utility within the JavaScript community.
+      </Li>
+    </Ul>
+    <ChipList items={["TypeScript", "Lit"]} />
+  </Article>
+
+  <Article class={className}>
+    <HeadlineArticle
+      title="Webmaster"
+      place="Danish Frisbee Sport Union"
+      placeLink="https://dfsu.dk"
+      start="2020"
+      end="2022"
+    />
+    <P>
+      Oversaw and optimized the organization's website, including migration to a
+      cost-effective hosting solution. Implemented a webshop for merchandise and
+      built a dedicated site for a high school PE program.
+    </P>
+    <Ul bulleted>
+      <Li>
+        Orchestrated the migration of the website to a more cost-efficient
+        hosting provider, achieving significant cost savings for the
+        organization.
+      </Li>
+      <Li>
+        Launched a webshop to diversify revenue streams through frisbee sales.
+      </Li>
+      <Li>
+        Developed a specialized website to support a high school PE program,
+        extending the organization's reach into educational settings.
+      </Li>
+    </Ul>
+  </Article>
+</Section>

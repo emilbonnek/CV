@@ -1,0 +1,12 @@
+---
+import { NAME } from "../../constants";
+import H1 from "../../components/ui/elements/H1.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<H1 class={className}>
+  {NAME}
+</H1>

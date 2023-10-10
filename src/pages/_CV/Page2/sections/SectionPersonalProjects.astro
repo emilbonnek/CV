@@ -1,0 +1,56 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Article from "../../../../components/ui/elements/Article.astro";
+import HeadlineArticle from "../../HeadlineArticle.astro";
+import P from "../../../../components/ui/elements/P.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import ChipList from "../../ChipList.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Personal Projects" iconName="home" />
+
+  <Article class={className}>
+    <HeadlineArticle
+      title="Co-founder"
+      place="Disc Tree"
+      placeLink="https://disctree.com"
+      start="2021"
+    />
+    <P>
+      Outside of my employment hours, I co-founded Disc Tree, an e-commerce
+      venture in the Disc Golf niche. My role centers around website development
+      and backend automation, with no overlap or conflict with my primary job
+      responsibilities.
+    </P>
+
+    <Ul bulleted>
+      <Li>
+        Designed and implemented a Shopify-based webshop, integrated with
+        transport management and bookkeeping systems.
+      </Li>
+      <Li>
+        Developed custom applications and scripts to automate tasks related to
+        data collection, reporting, and image processing, enhancing operational
+        efficiency.
+      </Li>
+    </Ul>
+    <ChipList
+      items={[
+        "TypesScript",
+        "Shopify",
+        "React",
+        "Firebase",
+        "PWA",
+        "Python",
+        "Rust",
+      ]}
+    />
+  </Article>
+</Section>

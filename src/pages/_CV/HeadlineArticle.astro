@@ -1,0 +1,30 @@
+---
+import RoleSubText from "./RoleSubText.astro";
+import RoleTitle from "./RoleTitle.astro";
+import H3 from "../../components/ui/elements/H3.astro";
+import Small from "../../components/ui/elements/Small.astro";
+
+interface Props {
+  title: string;
+  place: string;
+  placeLink?: string;
+  location?: string;
+  start: string;
+  end?: string;
+}
+const { title, place, placeLink, location, start, end } = Astro.props;
+---
+
+<div class="article-headline">
+  <H3>
+    <RoleTitle
+      title={title}
+      place={place}
+      placeLink={placeLink}
+      lineBreak={false}
+    />
+  </H3>
+  <Small>
+    <RoleSubText location={location} start={start} end={end} />
+  </Small>
+</div>

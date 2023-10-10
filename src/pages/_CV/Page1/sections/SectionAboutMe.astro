@@ -1,0 +1,20 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import P from "../../../../components/ui/elements/P.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="About Me" iconName="account" />
+  <P>
+    I'm a seasoned web developer with a knack for bridging gaps between design,
+    business, and engineering. Specializing in TypeScript and Next.js, I'm also
+    exploring the potentials of Rust. Outside of code, I stay plugged into the
+    latest trends via local dev meetups
+  </P>
+</Section>

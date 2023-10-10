@@ -1,0 +1,21 @@
+---
+import A from "../../components/ui/elements/A.astro";
+
+interface Props {
+  title: string;
+  place: string;
+  placeLink?: string;
+  lineBreak: boolean;
+}
+const { title, place, placeLink, lineBreak } = Astro.props;
+---
+
+{title}
+{lineBreak ? <br /> : <span class="slashes"> // </span>}
+{placeLink ? <A href={placeLink}>{place}</A> : place}
+
+<style>
+  .slashes {
+    font-weight: 400;
+  }
+</style>

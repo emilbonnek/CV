@@ -1,0 +1,20 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Interests" iconName="chess-knight" />
+
+  <Ul>
+    <Li>I attend meetups and follow the latest trends in web dev.</Li>
+    <Li>I like to play Ultimate Frisbee.</Li>
+  </Ul>
+</Section>

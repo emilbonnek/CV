@@ -1,0 +1,12 @@
+---
+import HeaderLink from "../../../HeaderLink.astro";
+import { PHONE } from "../../../../../constants";
+import { formatPhoneNumber } from "../../../../../utils/formatPhoneNumber";
+---
+
+<HeaderLink
+  href={`tel:${PHONE}`}
+  text={formatPhoneNumber(PHONE)}
+  iconName="phone"
+  iconPack="mdi"
+/>

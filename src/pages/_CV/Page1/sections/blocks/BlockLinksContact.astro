@@ -1,0 +1,15 @@
+---
+import BlockLinkPhone from "./BlockLinkPhone.astro";
+import BlockLinkEmail from "./BlockLinkEmail.astro";
+import HeaderLinkList from "../../../HeaderLinkList.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<HeaderLinkList class:list={["contact-links", className]}>
+  <BlockLinkEmail />
+  <BlockLinkPhone />
+</HeaderLinkList>

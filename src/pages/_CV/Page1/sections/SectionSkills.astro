@@ -1,0 +1,48 @@
+---
+import { SKILLS } from "../../../../skills";
+import HeadlineSection from "../../HeadlineSection.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import { Image } from "astro:assets";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Skills" iconName="star" />
+  <div class="image-list">
+    {
+      SKILLS.map(({ title, logo, url }) => (
+        <a href={url} target="_blank">
+          <Image
+            height="40"
+            width="40"
+            src={logo}
+            alt={title + " logo"}
+            title={title}
+          />
+        </a>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .image-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2mm;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  .image-list img {
+    transition: transform 0.2s ease-in-out;
+  }
+  .image-list img:hover {
+    transform: scale(1.1);
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import profileImageReference from "../../../../../images/photos/emilbonnek.jpg";
+import { NAME } from "../../../../../constants";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div class:list={["profile-image", className]}>
+  <Image src={profileImageReference} alt={NAME} />
+</div>
+
+<style>
+  .profile-image {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .profile-image > img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+  }
+</style>

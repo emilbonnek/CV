@@ -1,0 +1,20 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Languages" iconName="chat" />
+
+  <Ul>
+    <Li>Danish <span class="text-gray-500">(Native)</span></Li>
+    <Li>English <span class="text-gray-500">(Fluent)</span></Li>
+  </Ul>
+</Section>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  items: string[];
+}
+
+const items = Astro.props.items;
+---
+
+<div class="flex flex-wrap justify-center">
+  {
+    items.map((item) => (
+      <div class="m-1 flex items-center justify-center rounded-full border border-green-300 bg-green-100 px-2 py-1 font-medium text-green-700">
+        <div class="max-w-full flex-initial text-xs font-normal leading-none">
+          {item}
+        </div>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  bulleted?: boolean;
+}
+
+const { bulleted = false } = Astro.props;
+---
+
+<ul class="text-sm">
+  <slot />
+</ul>
+
+<style
+  define:vars={{
+    listStyleType: bulleted ? "disc" : "none",
+    paddingLeft: bulleted ? "20px" : "0",
+  }}
+>
+  ul {
+    list-style-type: var(--listStyleType);
+    padding-left: var(--paddingLeft);
+  }
+</style>

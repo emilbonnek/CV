@@ -1,0 +1,27 @@
+---
+import Header from "../Header.astro";
+import BlockTitle from "../BlockTitle.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Header class:list={["page-2-header", className]}>
+  <BlockTitle class="title" />
+</Header>
+
+<style is:global>
+  .page-2-header {
+    display: grid;
+    grid-template:
+      ". ..... . ." 6.5mm
+      ". title . ." auto
+      ". ..... . ." 6.5mm
+      / var(--pagePadding) auto 1fr var(--pagePadding);
+  }
+  .page-2-header > .title {
+    grid-area: title;
+  }
+</style>
