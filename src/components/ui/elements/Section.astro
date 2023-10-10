@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<section class={className}><slot /></section>
+
+<style is:global>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+  }
+</style>

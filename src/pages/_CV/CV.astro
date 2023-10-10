@@ -1,0 +1,26 @@
+---
+import ButtonDownload from "./ButtonDownload.astro";
+import CVPage1 from "./Page1/Page1.astro";
+import CVPage2 from "./Page2/Page2.astro";
+---
+
+<div
+  class="CV m-0 box-border flex flex-row flex-wrap items-center justify-center print:m-0 print:!block print:!min-w-[auto] print:!gap-0 print:!bg-none print:!p-0 print:!shadow-none"
+>
+  <ButtonDownload class="fixed bottom-3 right-3 print:hidden" />
+  <CVPage1 />
+  <CVPage2 />
+</div>
+
+<style>
+  .CV {
+    min-width: calc(var(--pageWidth) + 2 * var(--pageMargin));
+    gap: var(--pageMargin);
+    padding: var(--pageMargin);
+  }
+  @media print {
+    .CV {
+      -webkit-print-color-adjust: exact !important;
+    }
+  }
+</style>

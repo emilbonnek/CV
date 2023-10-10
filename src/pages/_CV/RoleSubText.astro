@@ -1,0 +1,10 @@
+---
+interface Props {
+  location?: string;
+  start: string;
+  end?: string;
+}
+const { location, start: year, end: yearEnd } = Astro.props;
+---
+
+{location ? `${location}, ` : ""}{year}{yearEnd ? ` - ${yearEnd}` : ""}

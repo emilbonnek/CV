@@ -1,0 +1,96 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Article from "../../../../components/ui/elements/Article.astro";
+import HeadlineArticle from "../../HeadlineArticle.astro";
+import P from "../../../../components/ui/elements/P.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import ChipList from "../../ChipList.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Work Experience" iconName="work" />
+
+  <Article>
+    <HeadlineArticle
+      title="Web Developer"
+      place="Bright Star Studios"
+      placeLink="https://brightstar.studio"
+      location="Copenhagen"
+      start="2023"
+      end="Current"
+    />
+    <P>
+      Responsible for the development and optimization of Ember Sword's website,
+      encompassing key features like authentication, account management, and
+      game integration.
+    </P>
+    <Ul bulleted>
+      <Li>
+        Architected and built a limited-time land sale event, creating a
+        real-time commerce application using React. This event led to $400,000
+        in sales inside a week.
+      </Li>
+      <Li>
+        Optimized the client-side JS bundle size in our Next.js web site,
+        achieving a 70% reduction, which substantially improved loading times
+        and Web Core Vitals for all users as measured by Lighthouse.
+      </Li>
+      <Li>
+        Introduced Zod for stringent schema validation and refactored CMS
+        integration to use strongly-typed GraphQL queries. Resulted in fewer
+        bugs and elevated developer confidence and pace.
+      </Li>
+      <Li>
+        Overhauled DevOps procedures, adding support for multiple environment
+        files and initiating a comprehensive CI pipeline for pull requests. This
+        led to more reliable code deployments and increased developer
+        confidence.
+      </Li>
+    </Ul>
+    <ChipList items={["TypeScript", "React", "Next.js", "Rust", "SQL"]} />
+  </Article>
+
+  <Article class={className}>
+    <HeadlineArticle
+      title="Software Developer"
+      place="IT Minds"
+      placeLink="https://it-minds.dk"
+      location="Copenhagen"
+      start="2020"
+      end="2022"
+    />
+    <P>
+      Integrated into diverse teams, contributing expertise across various
+      technology stacks and clients, from public libraries to large financial
+      institutions.
+    </P>
+
+    <Ul bulleted>
+      <Li>
+        Took charge of a self-service platform for Nordic libraries,
+        successfully enabling digital payments and driving cloud migration for
+        key web platforms to Azure/AWS.
+      </Li>
+      <Li>
+        Developed a stand-alone productivity tool using React, aimed at
+        improving data access for traders in a large financial institution.
+      </Li>
+      <Li>
+        Spearheaded the migration of API specifications to a new gateway, for
+        more straightforward in-bank API subscriptions and integrations.
+      </Li>
+      <Li>
+        Joined a task force evaluating the feasibility of Google Cloud for
+        data-heavy projects, contributing Google Cloud expertise and
+        certification.
+      </Li>
+    </Ul>
+    <ChipList items={["TypeScript", "React", "Node", "SQL", "Google Cloud"]} />
+  </Article>
+</Section>

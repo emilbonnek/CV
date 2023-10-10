@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon";
+import A from "../../components/ui/elements/A.astro";
+
+interface Props {
+  href: string;
+  text: string;
+  iconName: string;
+  iconPack?: string;
+}
+const { href, text, iconName, iconPack } = Astro.props;
+---
+
+<li class="flex flex-row items-center gap-[1.5mm]">
+  <Icon class="h-[4.5mm]" pack={iconPack} name={iconName} />
+  <A href={href}>{text}</A>
+</li>

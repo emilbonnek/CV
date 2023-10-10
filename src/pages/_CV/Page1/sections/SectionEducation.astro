@@ -1,0 +1,31 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import H3 from "../../../../components/ui/elements/H3.astro";
+import RoleSubText from "../../RoleSubText.astro";
+import RoleTitle from "../../RoleTitle.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Small from "../../../../components/ui/elements/Small.astro";
+import Article from "../../../../components/ui/elements/Article.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Education" iconName="education" />
+
+  <Article>
+    <H3>
+      <RoleTitle
+        title="BEng Software Technology"
+        place="DTU"
+        placeLink="https://www.dtu.dk/english"
+        lineBreak={true}
+      />
+    </H3>
+    <Small>
+      <RoleSubText location="Lyngby" start="2017" end="2020" />
+    </Small>
+  </Article>
+</Section>

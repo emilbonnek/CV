@@ -1,0 +1,62 @@
+---
+import Page from "../Page.astro";
+import CVPage1Header from "./Page1Header.astro";
+import SectionAboutMe from "./sections/SectionAboutMe.astro";
+import SectionCertifications from "./sections/SectionCertifications.astro";
+import SectionEducation from "./sections/SectionEducation.astro";
+import SectionLanguages from "./sections/SectionLanguages.astro";
+import SectionSkills from "./sections/SectionSkills.astro";
+import SectionWorkExperience from "./sections/SectionWorkExperience.astro";
+---
+
+<Page class="page-1">
+  <CVPage1Header class="header" />
+  <SectionAboutMe class="about-me" />
+  <SectionWorkExperience class="work-experience" />
+  <SectionEducation class="education" />
+  <SectionCertifications class="certifications" />
+  <SectionSkills class="skills" />
+  <SectionLanguages class="languages" />
+</Page>
+
+<style is:inline>
+  .page-1 {
+    display: grid;
+    grid-template:
+      "head head  head  head   head" 40mm
+      ".... ..... ..... ...... ...." 8mm
+      ".... about about about  ...." auto
+      ".... ..... ..... ...... ...." var(--pageSeparator)
+      ".... work  ..... edu    ...." auto
+      ".... work  ..... ...... ...." var(--pageSeparator)
+      ".... work  ..... certs  ...." auto
+      ".... work  ..... ...... ...." var(--pageSeparator)
+      ".... work  ..... skills ...." auto
+      ".... work  ..... ...... ...." var(--pageSeparator)
+      ".... work  ..... lang   ...." auto
+      ".... ..... ..... ...... ...." 1fr
+      ".... ..... ..... ...... ...." var(--pagePadding)
+      / var(--pagePadding) auto var(--pageSeparator) 50mm var(--pagePadding);
+  }
+  .page-1 > .header {
+    grid-area: head;
+  }
+  .page-1 > .about-me {
+    grid-area: about;
+  }
+  .page-1 > .work-experience {
+    grid-area: work;
+  }
+  .page-1 > .education {
+    grid-area: edu;
+  }
+  .page-1 > .certifications {
+    grid-area: certs;
+  }
+  .page-1 > .skills {
+    grid-area: skills;
+  }
+  .page-1 > .languages {
+    grid-area: lang;
+  }
+</style>

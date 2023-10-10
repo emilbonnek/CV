@@ -1,0 +1,32 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Other Skills" iconName="star" />
+
+  <Ul>
+    <Li>Version control <span class="text-gray-500">(Git)</span></Li>
+    <Li>CI/CD <span class="text-gray-500">(Github Actions)</span></Li>
+    <Li>
+      Linters and formatters <span class="text-gray-500"
+        >(ESLint, Prettier)</span
+      >
+    </Li>
+    <Li>Package management <span class="text-gray-500">(npm)</span></Li>
+    <Li>Testing <span class="text-gray-500">(Jest, Vitest)</span></Li>
+    <Li>Agile development <span class="text-gray-500">(Scrum)</span></Li>
+    <Li>Design systems <span class="text-gray-500">(Tailwind)</span></Li>
+    <Li>Web performance <span class="text-gray-500">(Lighthouse)</span></Li>
+    <Li>Web analytics <span class="text-gray-500">(Google Analytics)</span></Li>
+    <Li>Web hosting <span class="text-gray-500">(Vercel, Firebase)</span></Li>
+  </Ul>
+</Section>

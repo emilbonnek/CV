@@ -1,0 +1,17 @@
+---
+import BlockLinkLinkedin from "./BlockLinkLinkedin.astro";
+import BlockLinkGithub from "./BlockLinkGithub.astro";
+import BlockLinkWebsite from "./BlockLinkWebsite.astro";
+import HeaderLinkList from "../../../HeaderLinkList.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<HeaderLinkList class:list={["social-links", className]}>
+  <BlockLinkLinkedin />
+  <BlockLinkGithub />
+  <BlockLinkWebsite />
+</HeaderLinkList>

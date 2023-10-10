@@ -1,0 +1,47 @@
+---
+import Header from "../Header.astro";
+import BlockTitle from "../BlockTitle.astro";
+import BlockProfileImage from "./sections/blocks/BlockProfileImage.astro";
+import BlockLinksContact from "./sections/blocks/BlockLinksContact.astro";
+import BlockLinksSocial from "./sections/blocks/BlockLinksSocial.astro";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Header class:list={["page-1-header", className]}>
+  <BlockProfileImage class="profile-image" />
+  <BlockTitle class="title" />
+  <BlockLinksContact class="contact-links" />
+  <BlockLinksSocial class="social-links" />
+</Header>
+
+<style is:inline>
+  .page-1-header {
+    display: grid;
+    grid-template:
+      ". ..... . ....... . ...... ." 5mm
+      ". image . ....... . ...... ." 3mm
+      ". image . title   . social ." auto
+      ". image . ....... . social ." 1.5mm
+      ". image . contact . social ." auto
+      ". image . ....... . ...... ." 3mm
+      ". ..... . ....... . ...... ." 5mm
+      / 9mm 30mm 7mm auto 1fr auto 9mm;
+  }
+
+  .page-1-header > .profile-image {
+    grid-area: image;
+  }
+  .page-1-header > .title {
+    grid-area: title;
+  }
+  .page-1-header > .contact-links {
+    grid-area: contact;
+  }
+  .page-1-header > .social-links {
+    grid-area: social;
+  }
+</style>

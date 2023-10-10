@@ -1,0 +1,49 @@
+---
+import Page from "../Page.astro";
+import CVPage2Header from "./Page2Header.astro";
+import SectionOtherSkills from "./sections/SectionOtherSkills.astro";
+import SectionPersonalProjects from "./sections/SectionPersonalProjects.astro";
+import SectionVolunteerWork from "./sections/SectionVolunteerWork.astro";
+import SectionInterests from "./sections/SectionInterests.astro";
+---
+
+<Page class="page-2">
+  <CVPage2Header class="header" />
+  <SectionVolunteerWork class="volunteer-work" />
+  <SectionPersonalProjects class="personal-projects" />
+  <SectionOtherSkills class="other-skills" />
+  <SectionInterests class="interests" />
+</Page>
+
+<style is:inline>
+  .page-2 {
+    display: grid;
+    grid-template:
+      "head head      head      head         head" 20mm
+      ".... ......... ......... ............ ...." 15mm
+      ".... volunteer ......... other-skills ...." auto
+      ".... volunteer ......... ............ ...." var(--pageSeparator)
+      ".... volunteer ......... interests    ...." auto
+      ".... ......... ......... ............ ...." var(--pageSeparator)
+      ".... personal  personal  personal     ...." auto
+      ".... signature signature signature    ...." 8mm
+      ".... ......... ......... ............ ...." 1fr
+      "... ......... ......... ............ ...." var(--pagePadding)
+      / var(--pagePadding) auto var(--pageSeparator) 50mm var(--pagePadding);
+  }
+  .page-2 > .header {
+    grid-area: head;
+  }
+  .page-2 > .volunteer-work {
+    grid-area: volunteer;
+  }
+  .page-2 > .other-skills {
+    grid-area: other-skills;
+  }
+  .page-2 > .personal-projects {
+    grid-area: personal;
+  }
+  .page-2 > .interests {
+    grid-area: interests;
+  }
+</style>

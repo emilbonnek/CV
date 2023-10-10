@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div class:list={["header", className]}>
+  <slot />
+</div>
+<style>
+  .header {
+    background: var(--headerBackground);
+    color: var(--headerColor);
+  }
+</style>

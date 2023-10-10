@@ -1,0 +1,46 @@
+---
+import Icon from "astro-icon";
+import H2 from "../../components/ui/elements/H2.astro";
+import Hr from "../../components/ui/elements/Hr.astro";
+
+interface Props {
+  class?: string;
+  headline: string;
+  iconName: string;
+  iconPack?: string;
+}
+const { class: className, headline, iconName, iconPack = "mdi" } = Astro.props;
+---
+
+<div class:list={["section-headline", className]}>
+  <Icon class="icon" pack={iconPack} name={iconName} />
+  <H2 class="h2">{headline}</H2>
+  <Hr class="hr" />
+</div>
+
+<style is:global>
+  .section-headline {
+    --iconSize: 4.5mm;
+    display: grid;
+    grid-template:
+      "icon .. h2" var(--iconSize)
+      ".... .. .." 1.25mm
+      "hr   hr hr" auto
+      / var(--iconSize) 1.5mm auto;
+  }
+  .section-headline > .icon {
+    grid-area: icon;
+  }
+  .section-headline > .h2 {
+    grid-area: h2;
+  }
+  .section-headline > .hr {
+    grid-area: hr;
+  }
+</style>
+
+<style>
+  .section-headline > .icon {
+    color: var(--headerBackground);
+  }
+</style>

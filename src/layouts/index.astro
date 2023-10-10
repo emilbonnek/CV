@@ -1,0 +1,80 @@
+---
+import Body from "../components/ui/elements/Body.astro";
+import {
+  NAME,
+  DESCRIPTION,
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  PAGE_WIDTH,
+  PAGE_HEIGHT,
+  PAGE_MARGIN,
+  PAGE_PADDING,
+  PAGE_SEPARATOR,
+} from "../constants";
+---
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="description" content={DESCRIPTION} />
+    <meta name="author" content={NAME} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-title" content={NAME} />
+    <meta name="application-name" content={NAME} />
+    <meta name="msapplication-TileColor" content={PRIMARY_COLOR} />
+    <meta name="theme-color" content={PRIMARY_COLOR} />
+
+    <!-- Title -->
+    <title>{NAME}</title>
+
+    <!-- CSS variables -->
+    <style
+      is:global
+      define:vars={{
+        headerBackground: PRIMARY_COLOR,
+        headerColor: SECONDARY_COLOR,
+        pageWidth: PAGE_WIDTH,
+        pageHeight: PAGE_HEIGHT,
+        pageMargin: PAGE_MARGIN,
+        pagePadding: PAGE_PADDING,
+        pageSeparator: PAGE_SEPARATOR,
+      }}
+    ></style>
+
+    <!-- Light & Dark CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Print CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/print.css"
+      media="print"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="icons/favicon.svg" />
+    <link rel="mask-icon" href="icons/mask-icon.svg" color={PRIMARY_COLOR} />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <Body>
+    <slot />
+  </Body>
+
+
+</html>

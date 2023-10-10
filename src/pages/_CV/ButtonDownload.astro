@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon";
+import { twMerge } from "tailwind-merge";
+import { PDF_TITLE } from "../../constants";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<a
+  href={`/${PDF_TITLE}`}
+  class={twMerge(
+    className,
+    "mouse flex w-auto flex-row items-center gap-4 rounded-full border border-transparent bg-red-600 px-3 py-3 text-white shadow transition duration-200 ease-in hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+  )}
+>
+  <Icon pack="mdi" name="download" class="inline-block h-6 w-6" />
+  <p class="mr-3 hidden pb-1 font-semibold lg:block">Download as PDF</p>
+</a>
