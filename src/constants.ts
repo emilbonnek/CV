@@ -7,6 +7,7 @@ export const URL_GITHUB = "https://github.com/emilbonnek";
 export const URL_WEBSITE = "https://emilbonnek.com";
 
 export const DESCRIPTION = "My resume";
+export const PDF_TITLE = "emilbonnek.pdf";
 
 export const PRIMARY_COLOR = "#0b0b6e";
 export const SECONDARY_COLOR = "#fff";
