@@ -7,6 +7,11 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<small class={twMerge("mt-0 block font-bold text-gray-500", className)}>
+<small
+  class={twMerge(
+    "mt-0 block font-bold text-gray-500 text-[3.35mm] leading-[5mm]",
+    className
+  )}
+>
   <slot />
 </small>

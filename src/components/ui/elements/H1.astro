@@ -7,4 +7,6 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<h1 class={twMerge(className, "text-xl font-bold")}><slot /></h1>
+<h1 class={twMerge(className, "text-[5mm] leading-[5mm] font-bold")}>
+  <slot />
+</h1>

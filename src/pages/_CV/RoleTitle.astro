@@ -11,11 +11,5 @@ const { title, place, placeLink, lineBreak } = Astro.props;
 ---
 
 {title}
-{lineBreak ? <br /> : <span class="slashes"> // </span>}
+{lineBreak ? <br /> : <span class="slashes font-normal"> // </span>}
 {placeLink ? <A href={placeLink}>{place}</A> : place}
-
-<style>
-  .slashes {
-    font-weight: 400;
-  }
-</style>
