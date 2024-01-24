@@ -10,7 +10,7 @@ const { class: className } = Astro.props;
 ---
 
 <div class:list={["profile-image", className]}>
-  <Image src={profileImageReference} alt={NAME} />
+  <Image src={profileImageReference} alt={NAME} draggable={false} />
 </div>
 
 <style>
@@ -21,9 +21,9 @@ const { class: className } = Astro.props;
     width: 100%;
   }
   .profile-image > img {
-    border-radius: 50%;
     height: 100%;
     width: 100%;
     filter: saturate(0.7);
+    clip-path: circle(50%);
   }
 </style>
