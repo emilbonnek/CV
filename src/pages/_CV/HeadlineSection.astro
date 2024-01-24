@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 import H2 from "../../components/ui/elements/H2.astro";
 import Hr from "../../components/ui/elements/Hr.astro";
 
@@ -13,7 +13,7 @@ const { class: className, headline, iconName, iconPack = "mdi" } = Astro.props;
 ---
 
 <div class:list={["section-headline", className]}>
-  <Icon class="icon" pack={iconPack} name={iconName} />
+  <Icon class="icon" name={`${iconPack}:${iconName}`} />
   <H2 class="h2">{headline}</H2>
   <Hr class="hr" />
 </div>
