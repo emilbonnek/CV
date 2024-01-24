@@ -7,9 +7,4 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<hr
-  class={twMerge(
-    "my-0 block w-full border-t-[0.75mm] border-blue-300",
-    className,
-  )}
-/>
+<hr class={twMerge("my-0 block w-full border-t-[0.75mm]", className)} />
