@@ -36,28 +36,36 @@ const { class: className } = Astro.props;
         in sales inside a week.
       </Li>
       <Li>
-        Optimized the client-side JS bundle size in our Next.js web site,
-        achieving a 70% reduction, which substantially improved loading times
-        and Web Core Vitals for all users as measured by Lighthouse.
+        Optimized the client-side JS bundle size of the company's Next.js
+        website, achieving a 70% reduction, which substantially improved loading
+        times and Web Core Vitals for all users as measured by Lighthouse.
       </Li>
       <Li>
-        Introduced Zod, a library for stringent schema validation and refactored
-        CMS integration to use strongly-typed GraphQL queries. Resulted in fewer
-        bugs and elevated developer confidence and pace across the team.
+        Improved data integrity and developer confidence by introducing schema
+        validation and GraphQL introspection to the company's application.
       </Li>
       <Li>
         Overhauled DevOps procedures, adding support for multiple environments
-        and initiating a comprehensive CI pipeline for pull requests. This led
-        to more reliable code deployments and increased developer confidence.
+        in a declarative manner, and enabling the team to deploy to production
+        with confidence.
       </Li>
     </Ul>
-    <ChipList items={["TypeScript", "React", "Next.js", "Rust", "SQL"]} />
+    <ChipList
+      items={[
+        "TypeScript",
+        "React",
+        "Next.js",
+        "GitHub Actions",
+        "Rust",
+        "SQL",
+      ]}
+    />
   </Article>
 
   <Article class={className}>
     <HeadlineArticle
       title="Software Developer"
-      place="IT Minds"
+      place="twoday IT Minds"
       placeLink="https://it-minds.dk"
       location="Copenhagen"
       start="2020"
