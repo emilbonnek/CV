@@ -10,20 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/inter": "^5.0.13",
-    "@iconify-json/mdi": "^1.1.64",
-    "astro": "^4.2.4",
-    "astro-icon": "^1.0.2",
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource-variable/inter": "^5.1.0",
+    "@iconify-json/mdi": "^1.2.1",
+    "astro": "^4.16.7",
+    "astro-icon": "^1.1.1",
     "sharp": "^0.33.2",
     "sharp-ico": "^0.1.5",
-    "tailwind-merge": "^2.2.0",
-    "tailwindcss": "^3.4.1"
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.14"
   },
   "devDependencies": {
     "@types/express": "^4.17.18",
     "@types/node": "^20.8.4",
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "puppeteer": "^21.3.8"
   }
 }
