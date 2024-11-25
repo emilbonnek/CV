@@ -1,0 +1,49 @@
+---
+import HeadlineSection from "../../HeadlineSection.astro";
+import Section from "../../../../components/ui/elements/Section.astro";
+import Article from "../../../../components/ui/elements/Article.astro";
+import HeadlineArticle from "../../HeadlineArticle.astro";
+import P from "../../../../components/ui/elements/P.astro";
+import Ul from "../../../../components/ui/elements/Ul.astro";
+import Li from "../../../../components/ui/elements/Li.astro";
+import ChipList from "../../ChipList.astro";
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <HeadlineSection headline="Work Experience (continued)" iconName="work" />
+
+  <Article class={className}>
+    <HeadlineArticle
+      title="Software Developer"
+      place="twoday IT Minds"
+      placeLink="https://it-minds.dk"
+      location="Copenhagen"
+      start="2020"
+      end="2022"
+    />
+    <P>
+      As a consultant I joined various teams that needed extra resources and
+      help them work on their product.
+    </P>
+
+    <Ul bulleted>
+      <Li>
+        Worked as a backend developer for Danske Bank, where I contributed to
+        their Forex trading platform, mostly on infrastructure projects. I
+        helped the team with a large internal migration to a new API gateway.
+      </Li>
+      <Li>
+        Joined the product team at Bibliotheca where I took ownership of their
+        nordic library self service platform. As the only developer left on the
+        team I was responsible for the entire codebase there. I designed and
+        implemented a MobilePay integration and oversaw its introduction into
+        100s of danish libraries.
+      </Li>
+    </Ul>
+    <ChipList items={["Java", "SQL", "Google Cloud"]} />
+  </Article>
+</Section>
