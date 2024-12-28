@@ -5,10 +5,12 @@ import SectionOtherSkills from "./sections/SectionOtherSkills.astro";
 import SectionPersonalProjects from "./sections/SectionPersonalProjects.astro";
 import SectionVolunteerWork from "./sections/SectionVolunteerWork.astro";
 import SectionInterests from "./sections/SectionInterests.astro";
+import SectionWorkExperienceContinued from "./sections/SectionWorkExperienceContinued.astro";
 ---
 
 <Page class="page-2">
   <CVPage2Header class="header" />
+  <SectionWorkExperienceContinued class="work-experience-continued" />
   <SectionVolunteerWork class="volunteer-work" />
   <SectionOtherSkills class="other-skills" />
   <SectionInterests class="interests" />
@@ -20,19 +22,22 @@ import SectionInterests from "./sections/SectionInterests.astro";
     display: grid;
     grid-template:
       "head head      head      head         head" 20mm
-      ".... ......... ......... ............ ...." 15mm
-      ".... volunteer ......... other-skills ...." auto
+      ".... ....      ......... ............ ...." 15mm
+      ".... work      ......... other-skills ...." auto
       ".... volunteer ......... ............ ...." var(--pageSeparator)
       ".... volunteer ......... interests    ...." auto
       ".... ......... ......... ............ ...." var(--pageSeparator)
       ".... personal  personal  personal     ...." auto
       ".... signature signature signature    ...." 8mm
       ".... ......... ......... ............ ...." 1fr
-      "... ......... ......... ............ ...." var(--pagePadding)
+      "... .......... ......... ............ ...." var(--pagePadding)
       / var(--pagePadding) auto var(--pageSeparator) 50mm var(--pagePadding);
   }
   .page-2 > .header {
     grid-area: head;
+  }
+  .page-2 > .work-experience-continued {
+    grid-area: work;
   }
   .page-2 > .volunteer-work {
     grid-area: volunteer;

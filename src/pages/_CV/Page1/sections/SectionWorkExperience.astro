@@ -18,6 +18,49 @@ const { class: className } = Astro.props;
 
   <Article>
     <HeadlineArticle
+      title="Full Stack Developer"
+      place="Openframe"
+      placeLink="https://openframe.org/"
+      location="Copenhagen"
+      start="2024"
+      end="current"
+    />
+    <P>
+      I am currently working on the Openframe platform as part of a small
+      product team. My contributions has been new features and large-scale
+      refactors, focusing on developer experience and application performance.
+    </P>
+    <Ul bulleted>
+      <Li>
+        Built a file handling feature that allows users to organize files in a
+        tree structure inside Openframe projects. I contributed to the spec, and
+        implemented the backend as well as the frontend on my own.
+      </Li>
+      <Li>
+        Migrated the frontends build system from Webpack to Vite, reducing build
+        times by 10x and saving the company time and money in CI/CD. I also
+        migrated the code from TypeScript non-strict to strict mode, which
+        drastically reduced the number of bugs.
+      </Li>
+      <Li>
+        Took charge of the company's entire development and infrastructure for 2
+        months while the CTO was away.
+      </Li>
+    </Ul>
+    <ChipList
+      items={[
+        "TypeScript",
+        "React",
+        "Node",
+        "SQL",
+        "Tanstack Query",
+        "GitHub Actions",
+      ]}
+    />
+  </Article>
+
+  <Article>
+    <HeadlineArticle
       title="Web Developer"
       place="Bright Star Studios"
       placeLink="https://brightstar.studio"
@@ -25,74 +68,25 @@ const { class: className } = Astro.props;
       start="2023"
     />
     <P>
-      Responsible for the development and optimization of Ember Sword's website,
-      encompassing key features like authentication, account management, and
-      game integration.
+      Worked on the website for company's next generation browser game Ember
+      Sword as part of a team of just 2. The website is both a landing page and it functions as a web app with
+      has authentication, account management and deep integration with the game.
     </P>
     <Ul bulleted>
       <Li>
         Architected and built a limited time NFT sale event, creating a
         real-time commerce application using React. This event led to $400,000
-        in sales inside a week.
+        in sales inside a week. I was in charge of the very central real-time
+        map as well as some scraping of blockchain data.
       </Li>
       <Li>
         Optimized the client-side JS bundle size of the company's Next.js
         website, achieving a 70% reduction, which substantially improved loading
         times and Web Core Vitals for all users as measured by Lighthouse.
       </Li>
-      <Li>
-        Improved data integrity and developer confidence by introducing schema
-        validation and GraphQL introspection to the company's application.
-      </Li>
-      <Li>
-        Overhauled DevOps procedures, adding support for multiple environments
-        in a declarative manner, and enabling the team to deploy to production
-        with confidence.
-      </Li>
     </Ul>
     <ChipList
-      items={[
-        "TypeScript",
-        "React",
-        "Next.js",
-        "GitHub Actions",
-        "Rust",
-        "SQL",
-      ]}
+      items={["TypeScript", "React", "Next.js", "Tailwind", "GitHub Actions", "Rust"]}
     />
-  </Article>
-
-  <Article class={className}>
-    <HeadlineArticle
-      title="Software Developer"
-      place="twoday IT Minds"
-      placeLink="https://it-minds.dk"
-      location="Copenhagen"
-      start="2020"
-      end="2022"
-    />
-    <P>
-      Integrated into diverse teams, contributing expertise across various
-      technology stacks and clients, from public libraries to large financial
-      institutions.
-    </P>
-
-    <Ul bulleted>
-      <Li>
-        Took charge of a self-service platform for Nordic libraries,
-        successfully enabling digital payments and driving cloud migration for
-        key web platforms to Azure/AWS.
-      </Li>
-      <Li>
-        Spearheaded the migration of API specifications to a new gateway, for
-        more straightforward internal API subscriptions and integrations.
-      </Li>
-      <Li>
-        Joined a task force evaluating the feasibility of Google Cloud for data
-        ingestion projects, contributing Google Cloud expertise and
-        certification.
-      </Li>
-    </Ul>
-    <ChipList items={["TypeScript", "React", "Node", "SQL", "Google Cloud"]} />
   </Article>
 </Section>
