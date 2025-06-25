@@ -16,8 +16,9 @@ const { class: className } = Astro.props;
       SKILLS.map(({ title, logo, url }) => (
         <a href={url} target="_blank">
           <Image
-            height="40"
-            width="40"
+            height="250"
+            width="250"
+            style="width: 40px; height: 40px;"
             src={logo}
             alt={title + " logo"}
             title={title}
