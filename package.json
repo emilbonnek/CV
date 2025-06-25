@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "5.1.4",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource-variable/inter": "5.1.0",
     "@iconify-json/mdi": "1.2.2",
-    "astro": "5.1.1",
+    "astro": "^5.10.0",
     "astro-icon": "1.1.5",
     "sharp": "0.33.5",
     "sharp-ico": "0.1.5",
