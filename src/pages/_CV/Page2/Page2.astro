@@ -4,7 +4,6 @@ import CVPage2Header from "./Page2Header.astro";
 import SectionOtherSkills from "./sections/SectionOtherSkills.astro";
 import SectionPersonalProjects from "./sections/SectionPersonalProjects.astro";
 import SectionVolunteerWork from "./sections/SectionVolunteerWork.astro";
-import SectionInterests from "./sections/SectionInterests.astro";
 import SectionWorkExperienceContinued from "./sections/SectionWorkExperienceContinued.astro";
 ---
 
@@ -13,7 +12,6 @@ import SectionWorkExperienceContinued from "./sections/SectionWorkExperienceCont
   <SectionWorkExperienceContinued class="work-experience-continued" />
   <SectionVolunteerWork class="volunteer-work" />
   <SectionOtherSkills class="other-skills" />
-  <SectionInterests class="interests" />
   <SectionPersonalProjects class="personal-projects" />
 </Page>
 
@@ -24,8 +22,8 @@ import SectionWorkExperienceContinued from "./sections/SectionWorkExperienceCont
       "head head      head      head         head" 20mm
       ".... ....      ......... ............ ...." 15mm
       ".... work      ......... other-skills ...." auto
-      ".... volunteer ......... ............ ...." var(--pageSeparator)
-      ".... volunteer ......... interests    ...." auto
+      ".... ......... ......... other-skills ...." var(--pageSeparator)
+      ".... volunteer ......... other-skills ...." auto
       ".... ......... ......... ............ ...." var(--pageSeparator)
       ".... personal  personal  personal     ...." auto
       ".... signature signature signature    ...." 8mm
@@ -47,8 +45,5 @@ import SectionWorkExperienceContinued from "./sections/SectionWorkExperienceCont
   }
   .page-2 > .personal-projects {
     grid-area: personal;
-  }
-  .page-2 > .interests {
-    grid-area: interests;
   }
 </style>

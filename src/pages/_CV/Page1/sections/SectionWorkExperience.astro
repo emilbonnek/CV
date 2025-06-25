@@ -22,71 +22,58 @@ const { class: className } = Astro.props;
       place="Openframe"
       placeLink="https://openframe.org/"
       location="Copenhagen"
-      start="2024"
+      start="April 2024"
       end="current"
     />
     <P>
-      I am currently working on the Openframe platform as part of a small
-      product team. My contributions has been new features and large-scale
-      refactors, focusing on developer experience and application performance.
+      Working on a SaaS platform for the construction industry with 2 other
+      developers and 1 product manager.
     </P>
     <Ul bulleted>
       <Li>
-        Built a file handling feature that allows users to organize files in a
-        tree structure inside Openframe projects. I contributed to the spec, and
-        implemented the backend as well as the frontend on my own.
+        I built a file handling feature that allows users to organize files in a
+        traditional folder structure. I did the database schema, the backend
+        including the Google Cloud Storage integration, and the frontend was
+        done in collaboration with another developer.
       </Li>
+      <Li
+        >I migrated the codebase to Typescript from regular Javascript which was
+        initially thought to be too cumbersome. Now it is a decision everyone is
+        very happy with.</Li
+      >
       <Li>
-        Migrated the frontends build system from Webpack to Vite, reducing build
-        times by 10x and saving the company time and money in CI/CD. I also
-        migrated the code from TypeScript non-strict to strict mode, which
-        drastically reduced the number of bugs.
-      </Li>
-      <Li>
-        Took charge of the company's entire development and infrastructure for 2
-        months while the CTO was away.
+        I restructured and implemented the entire permission system as the
+        product moved to a freemium model and needed entirely new requirements
+        for what users could do.
       </Li>
     </Ul>
-    <ChipList
-      items={[
-        "TypeScript",
-        "React",
-        "Node",
-        "SQL",
-        "Tanstack Query",
-        "GitHub Actions",
-      ]}
-    />
+    <ChipList items={["TypeScript", "React", "Node", "Google Cloud"]} />
   </Article>
 
   <Article>
     <HeadlineArticle
       title="Web Developer"
       place="Bright Star Studios"
-      placeLink="https://brightstar.studio"
       location="Copenhagen"
-      start="2023"
+      start="February 2023"
+      end="December 2023"
     />
     <P>
-      Worked on the website for company's next generation browser game Ember
-      Sword as part of a team of just 2. The website is both a landing page and it functions as a web app with
-      has authentication, account management and deep integration with the game.
+      Worked on a Next.js site for Ember Sword, a now closed down crypto game
+      with just 1 other developer.
     </P>
     <Ul bulleted>
       <Li>
-        Architected and built a limited time NFT sale event, creating a
-        real-time commerce application using React. This event led to $400,000
-        in sales inside a week. I was in charge of the very central real-time
-        map as well as some scraping of blockchain data.
+        I built a real time map of the game world with Leaflet.js which was used
+        by thousands of players simultaneously during a big event.
       </Li>
       <Li>
-        Optimized the client-side JS bundle size of the company's Next.js
-        website, achieving a 70% reduction, which substantially improved loading
-        times and Web Core Vitals for all users as measured by Lighthouse.
+        I built several big presentational components for showing off the game
+        content on the main public website. These included custom carrousels,
+        and 3D experiences with three.js.
       </Li>
+      <Li>I built a scraper for the game's blockchain data with Rust.</Li>
     </Ul>
-    <ChipList
-      items={["TypeScript", "React", "Next.js", "Tailwind", "GitHub Actions", "Rust"]}
-    />
+    <ChipList items={["TypeScript", "React", "Next.js", "Rust", "AWS"]} />
   </Article>
 </Section>

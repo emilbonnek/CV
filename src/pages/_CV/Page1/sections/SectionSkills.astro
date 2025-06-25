@@ -1,5 +1,9 @@
 ---
-import { SKILLS } from "../../../../skills";
+import {
+  SKILLS_FRONTEND,
+  SKILLS_BACKEND,
+  SKILLS_INFRASTRUCTURE,
+} from "../../../../skills";
 import HeadlineSection from "../../HeadlineSection.astro";
 import Section from "../../../../components/ui/elements/Section.astro";
 import { Image } from "astro:assets";
@@ -11,29 +15,90 @@ const { class: className } = Astro.props;
 
 <Section class={className}>
   <HeadlineSection headline="Skills" iconName="star" />
-  <div class="image-list">
-    {
-      SKILLS.map(({ title, logo, url }) => (
-        <a href={url} target="_blank">
-          <Image
-            height="250"
-            width="250"
-            style="width: 40px; height: 40px;"
-            src={logo}
-            alt={title + " logo"}
-            title={title}
-          />
-        </a>
-      ))
-    }
+  <div class="skills-container">
+    <div class="skill-group">
+      <h3 class="group-title">Frontend</h3>
+      <div class="image-list">
+        {
+          SKILLS_FRONTEND.map(({ title, logo, url }) => (
+            <a href={url} target="_blank">
+              <Image
+                height="250"
+                width="250"
+                style="width: 40px; height: 40px;"
+                src={logo}
+                alt={title + " logo"}
+                title={title}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3 class="group-title">Backend</h3>
+      <div class="image-list">
+        {
+          SKILLS_BACKEND.map(({ title, logo, url }) => (
+            <a href={url} target="_blank">
+              <Image
+                height="250"
+                width="250"
+                style="width: 40px; height: 40px;"
+                src={logo}
+                alt={title + " logo"}
+                title={title}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3 class="group-title">Infrastructure</h3>
+      <div class="image-list">
+        {
+          SKILLS_INFRASTRUCTURE.map(({ title, logo, url }) => (
+            <a href={url} target="_blank">
+              <Image
+                height="250"
+                width="250"
+                style="width: 40px; height: 40px;"
+                src={logo}
+                alt={title + " logo"}
+                title={title}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </Section>
 
 <style>
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .group-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #888;
+    margin: 0;
+  }
   .image-list {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2mm;
   }
   .image-list img {

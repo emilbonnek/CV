@@ -14,19 +14,37 @@ const { class: className } = Astro.props;
   <HeadlineSection headline="Other Skills" iconName="star" />
 
   <Ul>
-    <Li>Version control <span class="text-gray-500">(Git)</span></Li>
-    <Li>CI/CD <span class="text-gray-500">(Github Actions)</span></Li>
-    <Li>
-      Linters and formatters <span class="text-gray-500"
-        >(ESLint, Prettier)</span
-      >
+    <Li class="flex flex-col">
+      <span>Version control</span>
+      <span class="text-gray-500">(Git, GitHub)</span>
     </Li>
-    <Li>Package management <span class="text-gray-500">(npm)</span></Li>
-    <Li>Testing <span class="text-gray-500">(Jest, Vitest)</span></Li>
-    <Li>Agile development <span class="text-gray-500">(Scrum)</span></Li>
-    <Li>Design systems <span class="text-gray-500">(Tailwind)</span></Li>
-    <Li>Web performance <span class="text-gray-500">(Lighthouse)</span></Li>
-    <Li>Web analytics <span class="text-gray-500">(Google Analytics)</span></Li>
-    <Li>Web hosting <span class="text-gray-500">(Vercel, Firebase)</span></Li>
+    <Li class="flex flex-col">
+      <span>CI/CD</span>
+      <span class="text-gray-500">(GitHub Actions)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>Linters and formatters</span>
+      <span class="text-gray-500">(ESLint, Prettier)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>Package managers</span>
+      <span class="text-gray-500">(npm, cargo)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>Testing</span>
+      <span class="text-gray-500">(Vitest, Playwright, Storybook)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>Code editors</span>
+      <span class="text-gray-500">(Cursor, VSCode)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>Database management</span>
+      <span class="text-gray-500">(SQL, Firestore)</span>
+    </Li>
+    <Li class="flex flex-col">
+      <span>API development</span>
+      <span class="text-gray-500">(REST, GraphQL)</span>
+    </Li>
   </Ul>
 </Section>

@@ -8,6 +8,7 @@ import imageReferenceJavascript from "./images/logos-tech/logo-tech-JAVS.png";
 import imageReferenceLit from "./images/logos-tech/logo-tech-LITD.png";
 import imageReferenceNext from "./images/logos-tech/logo-tech-NEXT.png";
 import imageReferenceNode from "./images/logos-tech/logo-tech-NODE.png";
+import imageReferencePostgres from "./images/logos-tech/logo-tech-POSG.png";
 import imageReferencePulumi from "./images/logos-tech/logo-tech-PULU.png";
 import imageReferencePython from "./images/logos-tech/logo-tech-PYTH.png";
 import imageReferenceReact from "./images/logos-tech/logo-tech-REAC.png";
@@ -46,7 +47,7 @@ const SKILL_DOCKER = {
   url: "https://www.docker.com",
 } as const satisfies Skill;
 const SKILL_GOOGLE_CLOUD = {
-  title: "Google Cloud",
+  title: "Google Cloud Platform (GCP)",
   logo: imageReferenceGoogleCloud,
   url: "https://cloud.google.com",
 } as const satisfies Skill;
@@ -75,6 +76,11 @@ const SKILL_NODE = {
   logo: imageReferenceNode,
   url: "https://nodejs.org",
 } as const satisfies Skill;
+const SKILL_POSTGRES = {
+  title: "PostgreSQL",
+  logo: imageReferencePostgres,
+  url: "https://www.postgresql.org",
+} as const satisfies Skill;
 const SKILL_PULUMI = {
   title: "Pulumi",
   logo: imageReferencePulumi,
@@ -101,7 +107,7 @@ const SKILL_RUST = {
   url: "https://www.rust-lang.org",
 } as const satisfies Skill;
 const SKILL_SOLID = {
-  title: "Solid",
+  title: "Solid.js",
   logo: imageReferenceSolid,
   url: "https://www.solidjs.com",
 } as const satisfies Skill;
@@ -111,7 +117,7 @@ const SKILL_TERRAFORM = {
   url: "https://www.terraform.io",
 } as const satisfies Skill;
 const SKILL_TRPC = {
-  title: "TRPC",
+  title: "tRPC",
   logo: imageReferenceTrpc,
   url: "https://trpc.io",
 } as const satisfies Skill;
@@ -126,6 +132,28 @@ const SKILL_WEBASSEMBLY = {
   url: "https://webassembly.org",
 } as const satisfies Skill;
 
+export const SKILLS_FRONTEND = [
+  SKILL_SOLID,
+  SKILL_LIT,
+  SKILL_REACT,
+  SKILL_ANGULAR,
+];
+
+export const SKILLS_BACKEND = [
+  SKILL_NODE,
+  SKILL_TYPESCRIPT,
+  SKILL_RUST,
+  SKILL_TRPC,
+];
+
+export const SKILLS_INFRASTRUCTURE = [
+  SKILL_GOOGLE_CLOUD,
+  SKILL_DOCKER,
+  SKILL_TERRAFORM,
+  SKILL_POSTGRES,
+];
+
+// Keep the old SKILLS export for backward compatibility if needed
 export const SKILLS = [
   SKILL_ANGULAR,
   SKILL_CSS,
@@ -138,4 +166,13 @@ export const SKILLS = [
   SKILL_NEXT,
   SKILL_NODE,
   SKILL_PULUMI,
+  SKILL_PYTHON,
+  SKILL_REACT,
+  SKILL_RUBY,
+  SKILL_RUST,
+  SKILL_SOLID,
+  SKILL_TERRAFORM,
+  SKILL_TRPC,
+  SKILL_TYPESCRIPT,
+  SKILL_WEBASSEMBLY,
 ];

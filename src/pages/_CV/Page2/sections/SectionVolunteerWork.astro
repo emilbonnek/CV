@@ -2,8 +2,6 @@
 import HeadlineSection from "../../HeadlineSection.astro";
 import Section from "../../../../components/ui/elements/Section.astro";
 import Article from "../../../../components/ui/elements/Article.astro";
-import HeadlineArticle from "../../HeadlineArticle.astro";
-import P from "../../../../components/ui/elements/P.astro";
 import Ul from "../../../../components/ui/elements/Ul.astro";
 import Li from "../../../../components/ui/elements/Li.astro";
 import ChipList from "../../ChipList.astro";
@@ -22,26 +20,26 @@ const { class: className } = Astro.props;
 
     <Ul bulleted>
       <Li>
-        Developed and maintains the <a
+        I developed and maintain <a
           href="https://github.com/nanostores/lit"
-          class="underline">official Nanostores integration for Lit</a
-        >. Simplifying state management in Lit components, and helps interop Lit
-        with other frameworks. Gained recognition through a recommendation in
-        the Astro framework's documentation.
+          class="underline">@nanostores/lit</a
+        > (35 ⭐️). Its a very small library that helps interop Lit components with
+        nanostores.
       </Li>
       <Li>
-        Contributed pull requests with bug fixes and improvements to various
-        Open Source libraries, with the most impactful being
-        <a href="https://github.com/Stuk/jszip" class="underline">JSZip</a> and
-        <a href="https://github.com/serde-rs/serde" class="underline">Serde</a>.
+        I have contributed smaller pull requests with bug fixes and improvements
+        to various Open Source libraries, with the most impactful being
+        <a href="https://github.com/Stuk/jszip" class="underline">JSZip</a> (10k
+        ⭐️ ) and
+        <a href="https://github.com/serde-rs/serde" class="underline">Serde</a> (10k
+        ⭐️).
       </Li>
       <Li>
-        Contributed bug reports and feedback to various Open Source libraries,
-        including <a
+        I have contributed feedback on API design to <a
           href="https://github.com/fabian-hiller/valibot"
           class="underline">Valibot</a
-        > where I was credited as a contributor early on for helping to improve the
-        API.
+        > (8k ⭐️) where the creator kindly credited me as a contributor early on
+        for helping.
       </Li>
       <ChipList items={["TypeScript", "Lit", "Rust"]} />
     </Ul>
